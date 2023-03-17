@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,13 +13,13 @@ body {
 }
 
 header {
- height: 5%;
- background-color: green;
- width: 100%;
- margin: 0;
+    height: 5%;
+    background-color: green;
+    width: 100%;
+    margin: 0;
 }
 
-                                /* NAV BAR */
+/* NAV BAR */
 .navbar {
     height: 100%;
     width: 100%;
@@ -43,7 +43,7 @@ header {
 }
 
 
-                            /* FIN NAV BAR */
+/* FIN NAV BAR */
 
 main {
     height: 90%;
@@ -52,7 +52,7 @@ main {
 }
 
 
-                            /* SITE TOP  */
+/* SITE TOP  */
 .siteTop {
     height: 20%;
     width: 100%;
@@ -61,6 +61,8 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /*  USER INFOS */
@@ -69,14 +71,62 @@ main {
     height: 90%;
     width: 40%;
     background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
 }
 
-/*  TAST FAVORI */
+/* AVATAR */
+.userImage {
+    height: 95%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.userAvatar {
+    height: 100%;
+    border-radius: 30px;
+}
+
+/* USERS INFORMATIONS RIGHT */
+.userInformations {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+/*  TASK FAVORI */
 
 .listPined {
     height: 90%;
     width: 40%;
     background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.listFav {
+    height: 85%;
+    width: 40%;
+    background-color: aquamarine;
+    border-radius: 15px;
+}
+
+.listDate {
+    height: 85%;
+    width: 40%;
+    border-radius: 15px;
+    background-color: aquamarine;
+
 }
 
 .siteMain {
