@@ -8,22 +8,26 @@
     <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
 <body>
-<div>
-    <form action="">
-        <label for="">Nom</label>
-        <input type="text">
-        <label for="">Prenom</label>
-        <input type="text">
-        <label for="">Email</label>
-        <input type="text">
-        <label for="">Mot De Passe</label>
-        <input type="text">
-        <input name="bouton_terminer" type="button" value="Inscription" 
-    onclick="document.location.href='list.html'">
-        
-    </form>
-</div>
-
+    <div class="form">
+        <div class="title">Welcome</div>
+        <div class="subtitle">Let's create your account!</div>
+        <div class="input-container ic1">
+            <input id="firstname" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="firstname" class="placeholder">First name</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="lastname" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="lastname" class="placeholder">Last name</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="email" class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="email" class="placeholder">Email </label>
+        </div>
+        <button onclick="document.location.href='list.html'" id="button" type="text" class="submit">Subscribe</button>
+    </div>
     <script src="assets/script/script.js"></script>
 </body>
 </html>
