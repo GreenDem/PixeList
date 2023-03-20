@@ -327,3 +327,10 @@ footer {
         width: 100%;
     }
 }
+
+
+/* Ancre */
+a {
+    text-decoration: none;
+    color: rgb(233, 220, 220); 
+}
