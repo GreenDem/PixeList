@@ -4,18 +4,24 @@
     box-sizing: border-box;
 }
 
-
+html{
+    height: auto;
+    width: 100%;
+}
 
 body {
-    height: 100vh;
-    width: 100vw;
+    height: auto;
+    width: 100%;
     background-color: red;
     font-family: sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    
 }
 
 header {
-    height: 5%;
+    height: 5vh;
     background-color: green;
     width: 100%;
     margin: 0;
@@ -25,7 +31,8 @@ header {
 .navbar {
     height: 100%;
     width: 100%;
-    padding: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -41,28 +48,42 @@ header {
 h1 {
     font-size: 1rem;
     font-weight: bold;
+    margin: 0;
 }
 
 .userProfile {
-    background-color: black;
     height: 100%;
     width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.userName {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    font-weight: bold;
 }
 
 .userProfileImage {
-    height: 100%;
-    width: 100%;
+    height: 110%;
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .imgNav {
-    max-width: 100%;
-    height: auto;
+    border-radius: 5px;
 }
 
 /* FIN NAV BAR */
 
 main {
-    height: 90%;
+    height: auto;
     width: 100%;
     background-color: aqua;
 }
@@ -70,7 +91,7 @@ main {
 
 /* SITE TOP  */
 .siteTop {
-    height: 20%;
+    height: 20vh;
     width: 100%;
     background-color: yellow;
     display: flex;
@@ -91,6 +112,7 @@ main {
     flex-direction: row;
     align-items: center;
     border-radius: 15px;
+    font-weight: bold;
 }
 
 /* AVATAR */
@@ -99,6 +121,14 @@ main {
     width: 50%;
     display: flex;
     justify-content: center;
+}
+
+.nameInfo {
+    margin: 0;
+}
+
+.dateUser {
+    font-weight: 100;
 }
 
 .userAvatar {
@@ -154,7 +184,7 @@ main {
 .categoryExemple {
     height: 100%;
     width: 20%;
-    background-color: violet;
+    background-color: #abcea1;
 }
 
 .listCreated {
@@ -164,10 +194,12 @@ main {
 }
 
 footer {
-    height: 5%;
+    height: 5vh;
     width: 100%;
     background-color: black;
-}
+    position: relative;
+    bottom: 0;
+    }
 
 /* List des TODO*/
 .app {
@@ -175,10 +207,10 @@ footer {
     width: 100%;
     height: 100%;
     padding: 15px;
-    overflow: scroll;
-    }
-    
-    #addNew {
+    /* overflow: scroll; */
+}
+
+#addNew {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -186,42 +218,112 @@ footer {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    }
-    
-    .fa-plus {
+}
+
+.fa-plus {
     background-color: #abcea1;
     padding: 3px;
     border-radius: 3px;
-    }
-    
-    #msg {
+}
+
+#msg {
     color: red;
-    }
-    
-    #tasks {
+}
+
+#tasks {
     display: grid;
     grid-template-columns: 1fr;
     gap: 14px;
 
-    }
-    
-    #tasks div {
+}
+
+#tasks div {
     border: 3px solid #abcea1;
     background-color: #e2eedecb;
     border-radius: 6px;
     padding: 5px;
     display: grid;
     gap: 4px;
-    }
-    
-    #tasks div .options {
+}
+
+#tasks div .options {
     justify-self: center;
     display: flex;
     gap: 20px;
 
-    }
-    
-    #tasks div .options i {
+}
+
+#tasks div .options i {
     cursor: pointer;
-    };
-    
+}
+
+
+
+@media (max-width: 900px) {
+    .userProfileImage {
+        width: 40%;
+    }
+
+
+}
+
+@media (max-width: 811px) {
+    .siteTop {
+        flex-direction: column;
+        display: flex;
+        height: 300px;
+        justify-content: space-around;
+    }
+
+
+    .userInfo {
+        width: 90%;
+        height: 45%;
+        justify-content: center;
+    }
+    .listPined {
+        width: 90%;
+        height: 45%;
+    }
+
+    .userInformations {
+        width: 90%;
+        height: 100%;
+        display: flex;
+    }
+
+    .userImage{
+        width: 40%;
+        height: 90%;
+    }
+
+    .userMail {
+        display: flex;
+        text-align: right;
+        margin-left: 10px;
+    }
+
+    .userInformations{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .userImage {
+        width: 40%;
+    }
+
+    .siteMain {
+        flex-direction: column;
+    }
+
+    .categoryExemple {
+        width: 100%;
+    }
+
+    .listCreated{
+        width: 100%;
+    }
+}
