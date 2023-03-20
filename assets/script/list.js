@@ -1,10 +1,14 @@
 let form = document.getElementById("form");
-let textInput = document.getElementById("textInput");
+let textInput = document.getElementById("textInput");                   // 
 let dateInput = document.getElementById("dateInput");
 let textarea = document.getElementById("textarea");
 let msg = document.getElementById("msg");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
+let category = document.getElementById('category');
+let addCateg = document.getElementById('addCateg');
+
+let idElements = 0;
 
 let data = [];
 
@@ -13,15 +17,14 @@ e.preventDefault();
 formValidation();
 });
 
-
 let createTasks = () => {
 tasks.innerHTML = "";
-data.map((x, y) => {
+data.map((dat, index) => {
     return (tasks.innerHTML += `
-    <div id=${y}>
-        <span class="fw-bold">${x.text}</span>
-        <span class="small text-secondary">${x.date}</span>
-        <p>${x.description}</p>
+    <div id=${index}>
+        <span class="fw-bold">${dat.text}</span>
+        <span class="small text-secondary">${dat.date}</span>
+        <p>${dat.description}</p>
 
         <span class="options">
             <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
@@ -33,8 +36,6 @@ data.map((x, y) => {
 
 resetForm();
 };
-
-
 
 let acceptData = () => {
     data.push({
@@ -49,7 +50,6 @@ let acceptData = () => {
     console.log(data);
 };
 
-
 let formValidation = () => {
     if (textInput.value === "") {
         console.log("failure");
@@ -59,7 +59,6 @@ let formValidation = () => {
         msg.innerHTML = "";
         acceptData();
 }
-
 
 add.setAttribute("data-bs-dismiss", "modal");
 add.click();
@@ -101,3 +100,29 @@ data = JSON.parse(localStorage.getItem("data")) || [];
 console.log(data);
 createTasks();
 })();
+
+// function de clonage des listes
+function duplicate(){
+    idElements++;
+    let newtodoList = document.createElement('div')
+
+    let listCreated = document.getElementById('listToClone');
+    let clonedDiv = listCreated.cloneNode(true);
+
+    let inputs = document.querySelectorAll('input');
+
+    console.log(inputs);
+
+    inputs.forEach(input => {
+        let id = input.getAttribute("id");
+        console.log(id);
+        console.log(idElements);
+        if(id){
+            input.setAttribute('id', id + idElements);
+        }
+    });
+    form.appendChild(clonedDiv);
+    console.log(clonedDiv)
+}
+
+addCateg.addEventListener('click',duplicate);   
