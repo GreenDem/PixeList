@@ -154,3 +154,10 @@ footer {
     width: 100%;
     background-color: black;
 }
+
+
+/* Ancre */
+a {
+    text-decoration: none;
+    color: rgb(233, 220, 220); 
+}
