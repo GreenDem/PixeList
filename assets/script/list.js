@@ -1,5 +1,5 @@
 let form = document.getElementById("form");
-let textInput = document.getElementById("textInput");                   // 
+let textInput = document.getElementById("textInput");                   // récupération des éléments html
 let dateInput = document.getElementById("dateInput");
 let textarea = document.getElementById("textarea");
 let msg = document.getElementById("msg");
@@ -10,15 +10,15 @@ let addCateg = document.getElementById('addCateg');
 
 let idElements = 0;
 
-let data = [];
+let data = [];                  // définition d'un tableau vide ou seront stockés les données a mettre dans le local storage
 
 form.addEventListener("submit", (e) => { 
-e.preventDefault();
-formValidation();
+e.preventDefault();                             // event sur le bouton du formulaire 
+formValidation();                               // appel de la fonction formValidation
 });
 
-let createTasks = () => {
-tasks.innerHTML = "";
+let createTasks = () => {                       
+tasks.innerHTML = "";                           // 
 data.map((dat, index) => {
     return (tasks.innerHTML += `
     <div id=${index}>
