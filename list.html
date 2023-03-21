@@ -67,52 +67,99 @@
                     <h5 class="text-center my-3">Tasks</h5>
                     <div id="tasks"></div>
                 </div>
-                    <form
-                        class="modal fade"
-                        id="form"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalLabel"
-                        aria-hidden="true"
-                        >
-                            <div class="modal-dialog" id="listToClone">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
-                                        <button
-                                        type="button"
-                                        class="btn-close"
-                                        data-bs-dismiss="modal"
-                                        aria-label="Close"
-                                        ></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Categorie</p>
-                                        <input type="text" class="form-control" id="categoryInput">
-                                        <p>Nom de la tâche</p>
-                                        <input type="text" class="form-control" name="" id="textInput" />
-                                        <div id="msg"></div>
-
-                                        <p>Due Date</p>
-                                        <input type="date" class="form-control" name="" id="dateInput" />
-
-                                        <p>Description</p>
-                                        <textarea
-                                            name=""
-                                            class="form-control"
-                                            id="textarea"
-                                            cols="30"
-                                            rows="5"
-                                        ></textarea>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                            Close
-                                        </button>
-                                        <button type="submit" id="add" class="btn btn-primary">Add</button>
-                                    </div>
-                                </div>
+                <form
+                class="modal fade"
+                id="form"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+                >
+                    <div class="modal-dialog" id="listToClone">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+                                <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                                ></button>
                             </div>
-                    </form>
+                            <div class="modal-body">
+                                <p>Categorie</p>
+                                <input type="text" class="form-control" id="categoryInput">
+                                <p>Nom de la tâche</p>
+                                <input type="text" class="form-control" name="" id="textInput" />
+                                <div id="msg"></div>
+
+                                <p>Due Date</p>
+                                <input type="date" class="form-control" name="" id="dateInput" />
+
+                                <p>Description</p>
+                                <textarea
+                                    name=""
+                                    class="form-control"
+                                    id="textarea"
+                                    cols="30"
+                                    rows="5"
+                                ></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="submit" id="add" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+            <form
+            class="modal fade"
+            id="formModify"
+            tabindex="-1"
+            aria-labelledby="modalModify"
+            aria-hidden="true"
+            >
+                <div class="modal-dialog" id="modalModifier">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalModify">Modify your Task</h5>
+                            <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Categorie</p>
+                            <input type="text" class="form-control modify" id="categoryInputModify">
+                            <p>Nom de la tâche</p>
+                            <input type="text" class="form-control modify" name="" id="textInputModify" />
+                            <div id="msg"></div>
+
+                            <p>Due Date</p>
+                            <input type="date" class="form-control modify" name="" id="dateInputModify" />
+
+                            <p>Description</p>
+                            <textarea
+                                name=""
+                                class="form-control modify"
+                                id="textareaModify"
+                                cols="30"
+                                rows="5"
+                            ></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="submit" id="modify" class="btn btn-primary">Modifier</button>
+                        </div>
+                    </div>
+                </div>
+        </form>
+
             </div>
             
             
