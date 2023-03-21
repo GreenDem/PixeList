@@ -19,12 +19,12 @@ formValidation();                               // appel de la fonction formVali
 
 let createTasks = () => {                       
 tasks.innerHTML = "";                          
-data.map((datas, index) => {                      // on parcours l'objet data qui ous retourne de l'html. il incrémente et ajoute du html en plus de celui qu'il a deja
+data.map((data, index) => {                      // on parcours l'objet data qui ous retourne de l'html. il incrémente et ajoute du html en plus de celui qu'il a deja
     return (tasks.innerHTML += `                
     <div id=${index}>
-        <span class="fw-bold">${datas.text}</span>
-        <span class="small text-secondary">${datas.date}</span>
-        <p>${dat.description}</p>
+        <span class="fw-bold">${data.text}</span>
+        <span class="small text-secondary">${data.date}</span>
+        <p>${data.description}</p>
 
         <span class="options">
             <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
@@ -101,28 +101,28 @@ console.log(data);
 createTasks();    // les datas de l'objet récupérés sont utilisées dans la fonction createTasks
 })();
 
-// function de clonage des listes
-function duplicate(){
-    idElements++;
-    let newtodoList = document.createElement('div')
+// // function de clonage des listes
+// function duplicate(){
+//     idElements++;
+//     let newtodoList = document.createElement('div')
 
-    let listCreated = document.getElementById('listToClone');
-    let clonedDiv = listCreated.cloneNode(true);
+//     let listCreated = document.getElementById('listToClone');
+//     let clonedDiv = listCreated.cloneNode(true);
 
-    let inputs = document.querySelectorAll('input');
+//     let inputs = document.querySelectorAll('input');
 
-    console.log(inputs);
+//     console.log(inputs);
 
-    inputs.forEach(input => {
-        let id = input.getAttribute("id");
-        console.log(id);
-        console.log(idElements);
-        if(id){
-            input.setAttribute('id', id + idElements);
-        }
-    });
-    form.appendChild(clonedDiv);
-    console.log(clonedDiv)
-}
+//     inputs.forEach(input => {
+//         let id = input.getAttribute("id");
+//         console.log(id);
+//         console.log(idElements);
+//         if(id){
+//             input.setAttribute('id', id + idElements);
+//         }
+//     });
+//     form.appendChild(clonedDiv);
+//     console.log(clonedDiv)
+// }
 
-addCateg.addEventListener('click',duplicate);   
+// addCateg.addEventListener('click',duplicate);   
