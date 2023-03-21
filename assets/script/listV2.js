@@ -36,7 +36,7 @@ function formValidation(){
         console.log('Réussi');
         msg.innerHTML = '';
         acceptDatas();
-
+        resetForm();
     }
 
 }
@@ -45,6 +45,7 @@ add.setAttribute("data-bs-dismiss", "modal");       // la modal disparait après
 
 
 let resetForm = () => {                 // on reset le formulaire après validation
+    categoryInput.value= "";
     textInput.value = "";
     dateInput.value = "";
     textarea.value = "";
@@ -73,5 +74,5 @@ let resetForm = () => {                 // on reset le formulaire après validat
     (() => {
         datas = JSON.parse(localStorage.getItem('datas') || [])
         console.log(datas);
-        read();
+        // read();
     })();
