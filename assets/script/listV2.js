@@ -53,6 +53,7 @@ let resetForm = () => {                 // on reset le formulaire après validat
 
 // Fonction read
     let read = () => {
+        tasks.innerHTML = "";
         datas.map((datas, index) => {
             return (tasks.innerHTML += `
                                             <div id=${index}>
@@ -74,5 +75,5 @@ let resetForm = () => {                 // on reset le formulaire après validat
     (() => {
         datas = JSON.parse(localStorage.getItem('datas') || [])
         console.log(datas);
-        // read();
+        read();
     })();
