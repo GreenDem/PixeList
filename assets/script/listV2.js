@@ -55,7 +55,7 @@ let resetForm = () => {                 // on reset le formulaire après validat
 // Fonction read
     let read = () => {
         tasks.innerHTML = "";
-        datas.map((data, index) => {
+        datas.map((datas, index) => {
             return (tasks.innerHTML += `
                                             <div id=${index}>
                                             <span class="fw-bold">${datas.category}
