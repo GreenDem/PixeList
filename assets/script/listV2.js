@@ -53,15 +53,20 @@ let resetForm = () => {                 // on reset le formulaire après validat
     };
 // Fonction read
     let read = () => {
-        datas.map(data, index => {
+        datas.map((datas, index) => {
             return (tasks.innerHTML += `
             <div id=${index}>
-            <span class="fw-bold">${data.category}
-            <span class="fw-bold">${data.text}</span>
-            <span class="small text-secondary">${data.date}</span>
-            <span class="small text-secondary">${data.description}</span>
+            <span class="fw-bold">${datas.category}
+            <span class="fw-bold">${datas.text}</span>
+            <span class="small text-secondary">${datas.date}</span>
+            <span class="small text-secondary">${datas.description}</span>
             <input type="checkbox" id="pinedCheckbox" onchange="pinedElement(this)"">
             </div>
             `)
         })
     }
+    (function () {
+        datas = JSON.parse(localStorage.getItem('data'))
+        console.log(datas);
+        read ()
+    })();
