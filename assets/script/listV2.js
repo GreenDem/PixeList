@@ -60,7 +60,7 @@ let resetForm = () => {                 // on reset le formulaire après validat
             <span class="fw-bold">${data.text}</span>
             <span class="small text-secondary">${data.date}</span>
             <span class="small text-secondary">${data.description}</span>
-            <input type="checkbox" id="pinedCheckbox">
+            <input type="checkbox" id="pinedCheckbox" onchange="pinedElement(this)"">
             </div>
             `)
         })
