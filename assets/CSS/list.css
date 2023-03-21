@@ -19,6 +19,8 @@ html{
     
 }
 
+
+
 body {
     height: auto;
     width: 100%;
@@ -27,6 +29,7 @@ body {
     /* overflow: hidden; */
     display: flex;
     flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
     
 }
 
@@ -97,11 +100,21 @@ h1 {
 main {
     height: auto;
     width: 100%;
-    background-color: aqua;
+    background-color: #E6f4f1;
 }
 
 
 /* SITE TOP  */
+.logoPL{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: solid 0.5px;
+
+}
+
 .siteTop {
     height: 20vh;
     width: 100%;
@@ -156,8 +169,8 @@ main {
 
 /* USERS INFORMATIONS RIGHT */
 .userInformations {
-    width: 40%;
     height: 100%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -177,6 +190,7 @@ main {
     border: solid 0.5px;
     border-color: #003e6d;
     
+    
 }
 
 .listFav {
@@ -184,7 +198,7 @@ main {
     width: 40%;
     background-color: #E6f4f1;
     border-radius: 15px;
-    border: solid 0.5px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .listDate {
@@ -192,8 +206,7 @@ main {
     width: 40%;
     border-radius: 15px;
     background-color: #E6f4f1;
-    border: solid 0.5px;
-
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .siteMain {
@@ -210,28 +223,21 @@ main {
 .listCreated {
     height: 100%;
     width: 90%;
-
     border-radius: 25px;
 }
 
-footer {
-    height: 5vh;
-    width: 100%;
-    background-color: black;
-    position: relative;
-    bottom: 0;
-    }
+
 
 /* List des TODO*/
 .app {
     
-    background-color: #003e6d;
+    background-color: #b1dcdd;
     width: 100%;
     height: 100%;
     padding: 15px;
     border-radius: 25px;
-    border: solid;
-    border-color: #fff8f8;
+    border: solid 0.5px;
+    border-color: #000000;
     
     /* overflow: scroll; */
 
@@ -242,22 +248,31 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #b1dcdd;
+    background-color: #e6f4f1;
     padding: 5px 10px;
     border-radius: 5px;
+    border: solid 0.5px;
+    border-color: #000000;
     cursor: pointer;
     color: #fff8f8;
 
 }
 
 #category{
-    color: #e6f4f1;
+    color: #000000;
+
 }
+
+.plus{
+    color: #000000;
+
+}
+
 
 
 /* Ajouter + effet au survol  */
 .fa-plus {
-    background-color: #003e6d;
+    background-color: #000000;
     padding: 3px;
     border-radius: 3px;
     transition: transform 0.2s ease-in-out; 
@@ -291,20 +306,29 @@ footer {
     transform: scale(1.2); 
 }
 
+.check-mark {
+    width: 19px;
+    height: 33px;
+    border: 2px solid #000000;
+    border-left: 0;
+    border-top: 0;
 
+    transform: rotate(45deg);
+}
 
 
 #msg {
     color: red;
 }
-.text-center{
-    color: #e6f4f1;
+.textCenter{
+    color: #000000;
 }
 
 #tasks {
     display: grid;
     grid-template-columns: 1fr;
     gap: 14px;
+    
 
 }
 
@@ -315,6 +339,7 @@ footer {
     padding: 5px;
     display: grid;
     gap: 4px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 #tasks div .options {
@@ -323,6 +348,7 @@ footer {
     gap: 20px;
 
 }
+
 
 #tasks div .options i {
     cursor: pointer;
@@ -345,16 +371,38 @@ footer {
         height: 300px;
         justify-content: space-around;
     }
+    .logoPL{
+    display: none;
+    }
 
+
+
+    #addNew{
+        width: 100%;
+
+    }
 
     .userInfo {
-        width: 90%;
+        width: 95%;
         height: 45%;
         justify-content: center;
+        margin-top: 15px;
+    
     }
     .listPined {
         width: 90%;
         height: 45%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .listDate{
+        height: 80%;
+        width: 45%;
+    }
+
+    .listFav{
+        height: 80%;
+        width: 45%;
     }
 
     .userInformations {
@@ -389,6 +437,7 @@ footer {
     .siteMain {
         flex-direction: column;
         min-height: 60vh;
+
     }
 
     .categoryExemple {
@@ -400,16 +449,22 @@ footer {
     }
 }
 
+footer {
+    height: 5vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    bottom: 0;
+    }
 
-/* Ancre */
+    /* Ancre */
 a {
 
     display: flex;
     text-align: center;
     justify-content: center;
-    color: #f8f8f8;
+    color: #000000;
     text-decoration: none;
-    background-color: #000000; 
-    
+    background-image: linear-gradient(to top, #000000, #2d2b2c, #545357, #7d8085, #a7b0b4, #bbc6c9, #d0dddd, #e6f4f1, #e6f4f1, #e6f4f1, #e6f4f1, #e6f4f1);
 }
 
