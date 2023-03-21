@@ -11,6 +11,7 @@ let categoryInput = document.getElementById('categoryInput');
 let pined = 0
 let datas = []
 
+
 form.addEventListener('submit', (even) =>{
     even.preventDefault();
     formValidation();
@@ -54,7 +55,7 @@ let resetForm = () => {                 // on reset le formulaire après validat
 // Fonction read
     let read = () => {
         tasks.innerHTML = "";
-        datas.map((datas, index) => {
+        datas.map((data, index) => {
             return (tasks.innerHTML += `
                                             <div id=${index}>
                                             <span class="fw-bold">${datas.category}
@@ -64,7 +65,7 @@ let resetForm = () => {                 // on reset le formulaire après validat
                                             <input type="checkbox" id="pinedCheckbox" onchange="pinedElement(this)"">
                                             <span class="options">
                                             <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
-                                            <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
+                                            <i onClick ="deleteTask(this);read()" class="fas fa-trash-alt"></i>
                                             </span>
 
                                             </div>
@@ -72,8 +73,9 @@ let resetForm = () => {                 // on reset le formulaire après validat
                     )       
         })
     }
-    (() => {
-        datas = JSON.parse(localStorage.getItem('datas') || [])
-        console.log(datas);
-        read();
-    })();
+(() => {
+    datas = JSON.parse(localStorage.getItem('data')) || [];
+    console.log(datas);
+    read();
+})();
+
