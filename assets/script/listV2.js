@@ -57,12 +57,12 @@ let resetForm = () => {                 // on reset le formulaire après validat
         tasks.innerHTML = "";
         datas.map((datas, index) => {
             return (tasks.innerHTML += `
-                                            <div id=${index}>
+                                            <div class="taskCreated" id=${index}>
                                             <span class="fw-bold">${datas.category}</span>
                                             <span class="fw-bold">${datas.text}</span>
                                             <span class="small text-secondary">${datas.date}</span>
                                             <span class="small text-secondary">${datas.description}</span>
-                                            <input type="checkbox" id="pinedCheckbox" onchange="pinedElement(this)"">
+                                            <input type="checkbox" class="checkBox" id="pinedCheckbox">
                                             <span class="options">
                                             <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#formModify" class="fas fa-edit"></i>
                                             <i onClick ="deleteTask(this);read()" class="fas fa-trash-alt"></i>
@@ -124,3 +124,17 @@ let resetFormModify = () => {                 // on reset le formulaire après v
     dateInputModify.value = "";
     textareaModify.value = "";
     };
+
+console.log(document.querySelectorAll(".checkBox"))
+let checkBoxs=document.querySelectorAll(".checkBox")
+
+checkBoxs.forEach(checkBox => {
+    checkBox.addEventListener('click', () => {
+    if (checkBox.checked==true) {
+        console.log('ok')
+    checkBox.parentElement.classList.add('green')
+    } else if (checkBox.checked==false) {
+        console.log('pas OK')
+    checkBox.parentElement.classList.remove('green')
+    }
+})})

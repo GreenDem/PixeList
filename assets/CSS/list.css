@@ -218,7 +218,9 @@ main {
     padding-bottom: 10px;
 }
 
-
+.green {
+    border: 2px solid green;
+}
 
 .listCreated {
     height: 100%;
@@ -226,6 +228,13 @@ main {
     border-radius: 25px;
 }
 
+.taskCreated {
+    width: 22%;
+    margin-bottom: 10px;
+    margin-right: 3%;
+    overflow-y: scroll;
+    height: 200px;
+}
 
 
 /* List des TODO*/
@@ -325,15 +334,14 @@ main {
 }
 
 #tasks {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     
 
 }
 
 #tasks div {
-    border: 3px solid#e6f4f1;
     background-color: #e6f4f1;
     border-radius: 6px;
     padding: 5px;
