@@ -36,11 +36,12 @@ function formValidation(){
         console.log('Réussi');
         msg.innerHTML = '';
         acceptDatas();
+
     }
-    add.setAttribute("data-bs-dismiss", "modal");       // la modal disparait après validation du formulaire
+
 }
 
-
+add.setAttribute("data-bs-dismiss", "modal");       // la modal disparait après validation du formulaire
 
 
 let resetForm = () => {                 // on reset le formulaire après validation
