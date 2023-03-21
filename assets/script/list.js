@@ -19,11 +19,11 @@ formValidation();                               // appel de la fonction formVali
 
 let createTasks = () => {                       
 tasks.innerHTML = "";                          
-data.map((dat, index) => {                      // on parcours l'objet data qui ous retourne de l'html. il incrémente et ajoute du html en plus de celui qu'il a deja
+data.map((datas, index) => {                      // on parcours l'objet data qui ous retourne de l'html. il incrémente et ajoute du html en plus de celui qu'il a deja
     return (tasks.innerHTML += `                
     <div id=${index}>
-        <span class="fw-bold">${dat.text}</span>
-        <span class="small text-secondary">${dat.date}</span>
+        <span class="fw-bold">${datas.text}</span>
+        <span class="small text-secondary">${datas.date}</span>
         <p>${dat.description}</p>
 
         <span class="options">

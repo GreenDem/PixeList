@@ -24,11 +24,12 @@ function formValidation(){
         console.log('Réussi');
         msg.innerHTML = '';
         acceptDatas();
+        add.setAttribute("data-bs-dismiss", "modal");    // la modal disparait après validation du formulaire
     }
 }
 
 
-add.setAttribute("data-bs-dismiss", "modal");    // la modal disparait après validation du formulaire
+
 
 let acceptDatas = () =>{
     datas.push({
@@ -39,6 +40,7 @@ let acceptDatas = () =>{
         //pined : pinedCheckbox.checked
     })
     localStorage.setItem("data", JSON.stringify(datas))
+    read ();
 }
 
 
@@ -49,3 +51,17 @@ let resetForm = () => {                 // on reset le formulaire après validat
     dateInput.value = "";
     textarea.value = "";
     };
+// Fonction read
+    let read = () => {
+        datas.map(data, index => {
+            return (tasks.innerHTML += `
+            <div id=${index}>
+            <span class="fw-bold">${data.category}
+            <span class="fw-bold">${data.text}</span>
+            <span class="small text-secondary">${data.date}</span>
+            <span class="small text-secondary">${data.description}</span>
+            <input type="checkbox" id="pinedCheckbox">
+            </div>
+            `)
+        })
+    }
