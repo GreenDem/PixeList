@@ -103,7 +103,21 @@
                                 <input type="date" class="form-control" name="dateInput" id="dateInput" />
 
                                 <p>Description</p>
-                                <textarea name="textarea" class="form-control" id="textarea" cols="30" rows="5"></textarea>
+                                <textarea
+                                    name=""
+                                    class="form-control"
+                                    id="textarea"
+                                    cols="30"
+                                    rows="5"
+                                ></textarea>
+                                <select name="color" id="colorSelect">
+                                    <option value="">--Selectionnez la couleur de votre catégorie--</option>
+                                    <option value="lightBlue">Bleu Clair</option>
+                                    <option value="green">Vert Pomme</option>
+                                    <option value="lightPurple">Violet</option>
+                                    <option value="blue">Bleu</option>
+                                </select>
+                                    
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -132,19 +146,31 @@
                                 <p>Due Date</p>
                                 <input type="date" class="form-control modify" name="dateInputModify" id="dateInputModify" />
 
-                                <p>Description</p>
-                                <textarea name="textareaModify" class="form-control modify" id="textareaModify" cols="30"
-                                    rows="5"></textarea>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                    Close
-                                </button>
-                                <button type="submit" id="modify" class="btn btn-primary">Modifier</button>
-                            </div>
+                            <p>Description</p>
+                            <textarea
+                                name=""
+                                class="form-control modify"
+                                id="textareaModify"
+                                cols="30"
+                                rows="5"
+                            ></textarea>
+                            <select name="colorModif" id="colorSelectModif">
+                                <option value="">--Selectionnez la couleur de votre catégorie--</option>
+                                <option value="lightBlue">Bleu jevoirien</option>
+                                <option value="green">Rouge Flash</option>
+                                <option value="lightPurple">Jaune Aveugle</option>
+                                <option value="blue">Violet néon</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="submit" id="modify" class="btn btn-primary">Modifier</button>
                         </div>
                     </div>
-                </form>
+                </div>
+        </form>
 
             </div>
 
