@@ -465,10 +465,14 @@ main {
     .listCreated{
         width: 100%;
     }
+
+    .app{
+        margin-bottom: 30px;
+    }
 }
 
 footer {
-    height: 5vh;
+    height: 6vh;
     width: 100%;
     background-color: black;
     position: relative;
@@ -481,8 +485,12 @@ a {
     display: flex;
     text-align: center;
     justify-content: center;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
-    background-image: linear-gradient(to top, #000000, #2d2b2c, #545357, #7d8085, #a7b0b4, #bbc6c9, #d0dddd, #e6f4f1, #e6f4f1, #e6f4f1, #e6f4f1, #e6f4f1);
+    background-color: #000000;
+    font-size: small;
+    margin-top: 12px;
+    
+    
 }
 
