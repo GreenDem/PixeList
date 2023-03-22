@@ -1,0 +1,12 @@
+/* Format Portable */
+@media only screen and (max-width: 600px) {
+    body {
+        background-image:url('../img/view-vista.gif');
+    }
+    }
+/* Format tablette / Paysage */
+    @media only screen and (min-width: 601px) and (max-width: 850px) {
+        body {
+            background-image:url('../img/mogolfiBG.webp');
+        }
+        }

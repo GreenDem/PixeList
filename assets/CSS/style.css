@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image:url('../phlusocosta-deserto.gif');
+    background-image:url('../img/phlusocosta-deserto.gif');
     background-size: cover;
     object-fit: cover;
     height: 100vh;
@@ -98,7 +98,7 @@ body{
     pointer-events: none;
     position: absolute;
     transform-origin: 0 50%;
-    transition: transform 200ms, color 200ms;
+    transition: transform 275ms, color 200ms;
     top: 20px;
 }
 
