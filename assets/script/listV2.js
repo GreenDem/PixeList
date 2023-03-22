@@ -144,8 +144,8 @@ checkBoxs.forEach(checkBox => {
 // DELETE FUNCTION
 let deleteTask=(del)=>{
     del.parentElement.parentElement.remove();
-    data.splice(del.parentElement.parentElement.id,1);
-    localStorage.setItem("data", JSON.stringify(data));
-    console.log(data);
+    datas.splice(del.parentElement.parentElement.id,1);
+    localStorage.setItem("data", JSON.stringify(datas));
+    console.log(datas);
 
 };
