@@ -65,6 +65,7 @@ let resetForm = () => {                 // on reset le formulaire après validat
                                             <span class="small text-secondary">${datas.date}</span>
                                             <span class="small text-secondary">${datas.description}</span>
                                             <input type="checkbox" class="checkBox" id="pinedCheckbox">
+                                            <input type="checkbox" class="checkBox" id="pinedCheckbox">
                                             <span class="options">
                                             <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#formModify" class="fas fa-edit"></i>
                                             <i onClick ="deleteTask(this);read()" class="fas fa-trash-alt"></i>
