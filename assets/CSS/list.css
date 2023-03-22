@@ -19,7 +19,9 @@ html{
     
 }
 
-
+.siteMain{
+    background-image: url('../img/mogolfiBG.webp');
+}
 
 body {
     height: auto;
@@ -30,7 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Courier New', Courier, monospace;
-    
+    background-image: url('../img/mogolfiBG.webp');
 }
 
 header {
@@ -363,7 +365,22 @@ main {
     cursor: pointer;
 }
 
+@media (max-width: 403px) {
+    .nameInfo{
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+    .xpBar{
+        width: 85%;
+        
+    }
 
+    .userMail{
+        height: 50%;
+        width: 30vw;
+        
+    }
+}
 
 @media (max-width: 900px) {
     .userProfileImage {
@@ -384,6 +401,16 @@ main {
     display: none;
     }
 
+    .divProgressBar{
+        display: flex;
+        flex-wrap: wrap;
+        border: #000000;
+        border-radius: 5px;
+        border: solid 0.5px;
+        height: 50%;
+        width: 35vw;
+        overflow: auto;
+    }
 
 
     #addNew{
@@ -476,4 +503,26 @@ a {
     text-decoration: none;
     background-image: linear-gradient(to top, #000000, #2d2b2c, #545357, #7d8085, #a7b0b4, #bbc6c9, #d0dddd, #e6f4f1, #e6f4f1, #e6f4f1, #e6f4f1, #e6f4f1);
 }
+/* Barre d'expérience */
+.divProgressBar{
+    display: flex;
+    flex-wrap: wrap;
+    border: #000000;
+    border-radius: 5px;
+    border: solid 0.5px;
+    height: 50%;
+    overflow: auto;
+}
 
+#progressBar{
+    background-color: rgb(101, 192, 222);
+    width: 90%;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+#progressBarWhite{
+    background-color: white;
+    width: 10%;
+}
