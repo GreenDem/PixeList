@@ -94,9 +94,10 @@ let editTask = (event) => {
     let editTargetId =event.parentElement.parentElement.id
 
     let category =datas[editTargetId].category
+    let text = datas[editTargetId].text
     let date=datas[editTargetId].date
     let description = datas[editTargetId].description
-    let text = datas[editTargetId].text
+    
 
     modalTarget[0].value=category
     modalTarget[1].value=text
@@ -138,3 +139,13 @@ checkBoxs.forEach(checkBox => {
     checkBox.parentElement.classList.remove('green')
     }
 })})
+
+
+// DELETE FUNCTION
+let deleteTask=(del)=>{
+    del.parentElement.parentElement.remove();
+    data.splice(del.parentElement.parentElement.id,1);
+    localStorage.setItem("data", JSON.stringify(data));
+    console.log(data);
+
+};
